@@ -7,4 +7,4 @@ A map showing realtime weather radar and alerts from the National Weather Servic
 
 A map showing earthquake data.
 
-<https://wildfable.github.io/Dixon_LeafletWebMap/earthquake/>s
+<https://wildfable.github.io/Dixon_LeafletWebMap/earthquake/>
