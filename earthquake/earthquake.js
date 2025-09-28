@@ -14,8 +14,10 @@ $.getJSON(earthquakeUrl, function(data){
         pointToLayer: function(feature, latlng) {
         return L.circleMarker(latlng, {
         radius: 5,
-        color: '#000',
-        weight: 1
+        color: getmagColor(feature.properties.mag),
+        weight: 1,
+        fillColor: getmagColor(feature.properties.mag) ,
+    
 
       });
     },
@@ -27,6 +29,20 @@ $.getJSON(earthquakeUrl, function(data){
       }).addTo(map);
       
 });
+
+function getmagColor(mag) {
+  let alertColor = 'orange'; 
+
+  if (mag >= 8) alertColor = 'purple';
+  if (mag >= 6) alertColor = 'red';
+  if (mag >= 3.2) alertColor = 'orange';
+  if (mag >= 3) alertColor = 'yellow';
+  if (mag < 3) alertColor = 'green';
+
+  return alertColor;
+}
+
+
 
 
 //add alerts layer
