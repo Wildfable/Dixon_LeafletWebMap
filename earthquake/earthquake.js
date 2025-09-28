@@ -37,9 +37,10 @@ function getmagColor(mag) {
   let alertColor = 'black'; 
 
   if (mag >= 8) alertColor = 'purple';
-  else if (mag >= 6) alertColor = 'red';
-  else if (mag >= 4) alertColor = 'orange';
-  else if (mag >= 3) alertColor = 'yellow';
+  else if (mag >= 7) alertColor = 'red';
+  else if (mag >= 6) alertColor = 'orange';
+  else if (mag >= 5) alertColor = 'yellow';
+  else if (mag >= 3) alertColor = 'blue';
   else return 'green';
 
   return alertColor;
