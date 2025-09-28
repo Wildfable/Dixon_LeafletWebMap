@@ -22,7 +22,10 @@ $.getJSON(earthquakeUrl, function(data){
       });
     },
             onEachFeature: function(feature, layer) {
-                layer.bindPopup(feature.properties.place);
+                const mag = feature.properties.mag;
+                const place = feature.properties.place;
+                const time = new Date(feature.properties.time).toLocaleString();
+                layer.bindPopup(feature.properties.place + mag + time);
                 
             }
           
@@ -31,7 +34,7 @@ $.getJSON(earthquakeUrl, function(data){
 });
 
 function getmagColor(mag) {
-  let alertColor = 'orange'; 
+  let alertColor = 'black'; 
 
   if (mag >= 8) alertColor = 'purple';
   else if (mag >= 6) alertColor = 'red';
