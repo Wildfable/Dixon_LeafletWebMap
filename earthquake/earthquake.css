@@ -7,3 +7,26 @@ body {
     width: 100%;
    }
    
+#earthquakemap {
+  position: relative; 
+}
+
+#legend {
+  position: absolute; 
+  bottom: 10px;       
+  left: 10px;         
+  background: white;
+  border: 1px solid black;
+  padding: 10px;
+  width: 140px;
+  font-family: Arial, sans-serif;
+  z-index: 1000;      
+  
+}
+
+#legend span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 6px;
+}

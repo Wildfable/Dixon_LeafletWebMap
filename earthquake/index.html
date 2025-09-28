@@ -8,10 +8,23 @@
     </head>
 
     <body>
-        <div id="earthquakemap"></div>
+        <div id="earthquakemap">
+        
+        <div id="legend">
+            <b style="float: left;">Earthquake Legend:</b><br><br>
+            <div><span style="background: green; width: 15px; height: 15px; display: inline-block;"></span> Magnitude of 0 - 2.9 </div>
+            <div><span style="background: blue; width: 15px; height: 15px; display: inline-block;"></span> Magnitude of 3 - 4.9 </div>
+            <div><span style="background: yellow; width: 15px; height: 15px; display: inline-block;"></span> Magnitude of 5 - 5.9 </div>
+            <div><span style="background: orange; width: 15px; height: 15px; display: inline-block;"></span> Magnitude of 6 - 6.9 </div>
+            <div><span style="background: red; width: 15px; height: 15px; display: inline-block;"></span> Magnitude of 7 - 7.9 </div>
+            <div><span style="background: purple; width: 15px; height: 15px; display: inline-block;"></span> Magnitude of 8+ </div>
+        </div>
+    </div>
+      
         <script src="leaflet.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="earthquake.js"></script>
         <script src="leaflet-providers.js"></script>
+
     </body>
 </html>
