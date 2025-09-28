@@ -1,7 +1,11 @@
 var map = L.map('weathermap').setView([38, -95], 4);
-var basemapUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-var basemap =  L.tileLayer(basemapUrl, {attribution: '&copy; <a href="http://' + 'www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
 
+var basemapUrl = 'https://maptiles.p.rapidapi.com/en/map/v1/{z}/{x}/{y}.png?rapidapi-key=ffc32c546cmsh2a5a8d13469a903p1be10ajsna2736de9a84a';
+
+var basemap = L.tileLayer(basemapUrl, {
+  attribution: '&copy; <a href="https://www.maptilesapi.com/">MapTiles API</a>',
+  maxZoom: 19
+}).addTo(map);
 
 //add the national precipitation radar layer
 var radarUrl = 'https://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi';
