@@ -11,7 +11,14 @@ var basemap = L.tileLayer(basemapUrl, {
 var earthquakeUrl = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson';
 $.getJSON(earthquakeUrl, function(data){
     L.geoJSON(data, {
-        
+        pointToLayer: function(feature, latlng) {
+        return L.circleMarker(latlng, {
+        radius: 5,
+        color: '#000',
+        weight: 1
+
+      });
+    },
             onEachFeature: function(feature, layer) {
                 layer.bindPopup(feature.properties.place);
                 
