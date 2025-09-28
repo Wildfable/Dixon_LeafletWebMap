@@ -25,7 +25,7 @@ $.getJSON(earthquakeUrl, function(data){
                 const mag = feature.properties.mag;
                 const place = feature.properties.place;
                 const time = new Date(feature.properties.time).toLocaleString();
-                layer.bindPopup(feature.properties.place + mag + time);
+                layer.bindPopup(feature.properties.place + '<br>' + 'Magnitude:' + mag + '<br>' + time);
                 
             }
           
