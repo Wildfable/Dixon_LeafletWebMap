@@ -15,7 +15,7 @@ $.getJSON(earthquakeUrl, function(data){
         return L.circleMarker(latlng, {
         radius: 5,
         color: getmagColor(feature.properties.mag),
-        weight: 1,
+        weight: 2,
         fillColor: getmagColor(feature.properties.mag) ,
     
 
@@ -34,10 +34,10 @@ function getmagColor(mag) {
   let alertColor = 'orange'; 
 
   if (mag >= 8) alertColor = 'purple';
-  if (mag >= 6) alertColor = 'red';
-  if (mag >= 3.2) alertColor = 'orange';
-  if (mag >= 3) alertColor = 'yellow';
-  if (mag < 3) alertColor = 'green';
+  else if (mag >= 6) alertColor = 'red';
+  else if (mag >= 4) alertColor = 'orange';
+  else if (mag >= 3) alertColor = 'yellow';
+  else return 'green';
 
   return alertColor;
 }
